@@ -1,0 +1,95 @@
+import { Customer, Transaction } from "@/types/ledger";
+
+export const mockCustomers: Customer[] = [
+  {
+    id: "1",
+    name: "Raj Kumar",
+    phone: "+91 98765 43210",
+    address: "Shop No. 15, Main Market, Delhi",
+    balance: 12500,
+    createdAt: new Date("2024-01-15"),
+  },
+  {
+    id: "2", 
+    name: "Priya Sharma",
+    phone: "+91 87654 32109",
+    address: "B-22, Sector 18, Noida",
+    balance: -5000,
+    createdAt: new Date("2024-02-10"),
+  },
+  {
+    id: "3",
+    name: "Amit Singh",
+    phone: "+91 76543 21098",
+    address: "House No. 45, Gandhi Nagar, Mumbai",
+    balance: 8750,
+    createdAt: new Date("2024-01-20"),
+  },
+  {
+    id: "4",
+    name: "Sunita Devi",
+    phone: "+91 65432 10987",
+    address: "Flat 304, Rose Apartments, Pune",
+    balance: -2000,
+    createdAt: new Date("2024-03-01"),
+  },
+];
+
+export const mockTransactions: Transaction[] = [
+  {
+    id: "t1",
+    customerId: "1",
+    amount: 5000,
+    type: "credit",
+    description: "Payment received for goods",
+    date: new Date("2024-03-15"),
+  },
+  {
+    id: "t2",
+    customerId: "1", 
+    amount: 7500,
+    type: "credit",
+    description: "Advance payment",
+    date: new Date("2024-03-10"),
+  },
+  {
+    id: "t3",
+    customerId: "2",
+    amount: 3000,
+    type: "debit",
+    description: "Goods purchased",
+    date: new Date("2024-03-12"),
+  },
+  {
+    id: "t4",
+    customerId: "2",
+    amount: 2000,
+    type: "debit", 
+    description: "Additional purchase",
+    date: new Date("2024-03-08"),
+  },
+  {
+    id: "t5",
+    customerId: "3",
+    amount: 4500,
+    type: "credit",
+    description: "Payment for services",
+    date: new Date("2024-03-14"),
+  },
+  {
+    id: "t6",
+    customerId: "3",
+    amount: 4250,
+    type: "credit",
+    description: "Monthly settlement",
+    date: new Date("2024-03-05"),
+  },
+  {
+    id: "t7",
+    customerId: "4",
+    amount: 2000,
+    type: "debit",
+    description: "Product delivery",
+    date: new Date("2024-03-13"),
+  },
+];
