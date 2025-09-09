@@ -16,9 +16,9 @@ export function Dashboard({ stats, recentTransactions, onAddCustomer, onAddTrans
   return (
     <div className="space-y-6">
       {/* Welcome Header */}
-      <div className="bg-gradient-primary rounded-xl p-6 text-primary-foreground shadow-glow">
-        <h1 className="text-2xl font-bold mb-2">Smart Khata Ledger</h1>
-        <p className="text-primary-foreground/90">Manage your business finances with ease</p>
+      <div className="bg-card border border-border rounded-lg p-6 shadow-soft">
+        <h1 className="text-2xl font-bold mb-2 text-foreground">Smart Khata Ledger</h1>
+        <p className="text-muted-foreground">Manage your business finances with ease</p>
       </div>
 
       {/* Stats Cards */}

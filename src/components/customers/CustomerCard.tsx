@@ -36,13 +36,13 @@ export function CustomerCard({ customer, onSelect, onCall, onMessage }: Customer
 
   return (
     <Card 
-      className="shadow-soft hover:shadow-medium transition-smooth cursor-pointer border-l-4 border-l-primary/20"
+      className="shadow-soft hover:shadow-medium transition-smooth cursor-pointer border border-border hover:border-primary/30"
       onClick={() => onSelect(customer)}
     >
       <CardContent className="p-4">
         <div className="flex items-center gap-4">
-          <Avatar className="w-12 h-12 border-2 border-primary/10">
-            <AvatarFallback className="bg-primary/10 text-primary font-semibold">
+          <Avatar className="w-12 h-12 border border-border">
+            <AvatarFallback className="bg-muted text-foreground font-semibold">
               {customer.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
             </AvatarFallback>
           </Avatar>
