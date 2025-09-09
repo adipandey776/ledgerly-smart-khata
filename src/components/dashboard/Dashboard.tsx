@@ -16,41 +16,43 @@ export function Dashboard({ stats, recentTransactions, onAddCustomer, onAddTrans
   return (
     <div className="space-y-6">
       {/* Welcome Header */}
-      <div className="bg-card border border-border rounded-lg p-6 shadow-soft">
-        <h1 className="text-2xl font-bold mb-2 text-foreground">Smart Khata Ledger</h1>
-        <p className="text-muted-foreground">Manage your business finances with ease</p>
+      <div className="bg-card border border-border rounded-xl p-6 shadow-soft">
+        <div className="text-center">
+          <h1 className="text-3xl font-bold text-foreground mb-2">Smart Khata Ledger</h1>
+          <p className="text-muted-foreground text-lg">Manage your business finances with ease</p>
+        </div>
       </div>
 
       {/* Stats Cards */}
       <DashboardStats stats={stats} />
 
       {/* Quick Actions */}
-      <Card className="shadow-soft">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <TrendingUp className="w-5 h-5" />
+      <Card className="shadow-medium border border-border">
+        <CardHeader className="pb-4">
+          <CardTitle className="flex items-center gap-3 text-xl">
+            <TrendingUp className="w-6 h-6 text-primary" />
             Quick Actions
           </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-2 gap-4">
             <Button 
-              variant="professional" 
-              size="lg" 
+              variant="outline" 
+              size="xl" 
               onClick={onAddCustomer}
-              className="h-16 flex-col gap-2"
+              className="h-20 flex-col gap-3 border-2 hover:border-primary hover:bg-primary/5"
             >
-              <UserPlus className="w-6 h-6" />
-              Add Customer
+              <UserPlus className="w-8 h-8 text-primary" />
+              <span className="font-semibold">Add Customer</span>
             </Button>
             <Button 
-              variant="gradient" 
-              size="lg" 
+              variant="default" 
+              size="xl" 
               onClick={onAddTransaction}
-              className="h-16 flex-col gap-2"
+              className="h-20 flex-col gap-3 bg-primary hover:bg-primary-dark"
             >
-              <Plus className="w-6 h-6" />
-              Add Transaction
+              <Plus className="w-8 h-8" />
+              <span className="font-semibold">Add Transaction</span>
             </Button>
           </div>
         </CardContent>

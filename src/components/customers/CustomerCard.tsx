@@ -36,19 +36,19 @@ export function CustomerCard({ customer, onSelect, onCall, onMessage }: Customer
 
   return (
     <Card 
-      className="shadow-soft hover:shadow-medium transition-smooth cursor-pointer border border-border hover:border-primary/30"
+      className="shadow-medium hover:shadow-large transition-smooth cursor-pointer border-l-4 border-l-primary/30 hover:border-l-primary bg-card"
       onClick={() => onSelect(customer)}
     >
       <CardContent className="p-4">
         <div className="flex items-center gap-4">
-          <Avatar className="w-12 h-12 border border-border">
-            <AvatarFallback className="bg-muted text-foreground font-semibold">
+          <Avatar className="w-14 h-14 border-2 border-primary/20">
+            <AvatarFallback className="bg-primary/10 text-primary font-bold text-lg">
               {customer.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
             </AvatarFallback>
           </Avatar>
           
           <div className="flex-1 min-w-0">
-            <h3 className="font-semibold text-foreground truncate">{customer.name}</h3>
+            <h3 className="font-bold text-lg text-foreground truncate">{customer.name}</h3>
             <div className="flex items-center gap-1 text-sm text-muted-foreground mb-1">
               <Phone className="w-3 h-3" />
               <span className="truncate">{customer.phone}</span>
@@ -62,7 +62,7 @@ export function CustomerCard({ customer, onSelect, onCall, onMessage }: Customer
           </div>
           
           <div className="text-right">
-            <p className={cn("font-bold text-sm", getBalanceColor(customer.balance))}>
+            <p className={cn("font-bold text-base", getBalanceColor(customer.balance))}>
               {getBalanceText(customer.balance)}
             </p>
             <div className="flex gap-1 mt-2">

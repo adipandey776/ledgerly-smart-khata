@@ -8,29 +8,29 @@ interface DashboardStatsProps {
 
 export function DashboardStats({ stats }: DashboardStatsProps) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
       <StatsCard
         title="You'll Receive" 
         amount={stats.totalReceivable}
-        icon={<TrendingUp className="w-5 h-5" />}
+        icon={<TrendingUp className="w-6 h-6" />}
         variant="success"
       />
       <StatsCard
         title="You'll Pay"
         amount={stats.totalPayable}
-        icon={<TrendingDown className="w-5 h-5" />}
+        icon={<TrendingDown className="w-6 h-6" />}
         variant="danger"
       />
       <StatsCard
         title="Net Balance"
         amount={stats.netBalance}
-        icon={<Wallet className="w-5 h-5" />}
+        icon={<Wallet className="w-6 h-6" />}
         variant={stats.netBalance >= 0 ? "success" : "danger"}
       />
       <StatsCard
         title="Total Customers"
         amount={stats.totalCustomers}
-        icon={<Users className="w-5 h-5" />}
+        icon={<Users className="w-6 h-6" />}
         variant="default"
       />
     </div>

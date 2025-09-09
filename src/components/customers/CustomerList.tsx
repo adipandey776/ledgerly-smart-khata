@@ -44,7 +44,7 @@ export function CustomerList({
           <Users className="w-6 h-6 text-primary" />
           <h2 className="text-xl font-bold text-foreground">Customers</h2>
         </div>
-        <Button variant="gradient" size="lg" onClick={onAddCustomer}>
+        <Button variant="default" size="lg" onClick={onAddCustomer}>
           <UserPlus className="w-5 h-5" />
           Add Customer
         </Button>
@@ -69,7 +69,7 @@ export function CustomerList({
             <p className="text-muted-foreground mb-4">
               {searchTerm ? "No customers found matching your search" : "No customers yet"}
             </p>
-            <Button variant="gradient" onClick={onAddCustomer}>
+            <Button variant="default" onClick={onAddCustomer}>
               <UserPlus className="w-4 h-4 mr-2" />
               Add Your First Customer
             </Button>

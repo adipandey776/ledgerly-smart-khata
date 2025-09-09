@@ -19,48 +19,49 @@ export function StatsCard({ title, amount, icon, variant = "default", className 
     }).format(Math.abs(value));
   };
 
-  const getVariantStyles = () => {
+  const getVariantConfig = () => {
     switch (variant) {
       case "success":
-        return "border-success/20 bg-success-muted";
+        return {
+          cardClass: "border-success/20 bg-success-muted shadow-medium hover:shadow-large",
+          iconClass: "bg-success/10 text-success",
+          amountClass: "text-success"
+        };
       case "danger":
-        return "border-danger/20 bg-danger-muted";
+        return {
+          cardClass: "border-danger/20 bg-danger-muted shadow-medium hover:shadow-large",
+          iconClass: "bg-danger/10 text-danger",
+          amountClass: "text-danger"
+        };
       case "warning":
-        return "border-yellow-200 bg-yellow-50";
+        return {
+          cardClass: "border-secondary/20 bg-yellow-50 shadow-medium hover:shadow-large",
+          iconClass: "bg-secondary/10 text-secondary",
+          amountClass: "text-secondary"
+        };
       default:
-        return "border-border bg-card";
+        return {
+          cardClass: "border-primary/20 bg-primary/5 shadow-medium hover:shadow-large",
+          iconClass: "bg-primary/10 text-primary",
+          amountClass: "text-primary"
+        };
     }
   };
 
-  const getAmountColor = () => {
-    if (amount > 0) {
-      return variant === "danger" ? "text-danger" : "text-success";
-    } else if (amount < 0) {
-      return variant === "success" ? "text-success" : "text-danger";
-    }
-    return "text-muted-foreground";
-  };
+  const config = getVariantConfig();
 
   return (
-    <Card className={cn("shadow-soft hover:shadow-medium transition-smooth", getVariantStyles(), className)}>
-      <CardContent className="p-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className={cn(
-              "p-2 rounded-lg",
-              variant === "success" && "bg-success/10 text-success",
-              variant === "danger" && "bg-danger/10 text-danger", 
-              variant === "warning" && "bg-yellow-100 text-yellow-600",
-              variant === "default" && "bg-primary/10 text-primary"
-            )}>
-              {icon}
-            </div>
-            <div>
-              <p className="text-sm font-medium text-muted-foreground">{title}</p>
-              <p className={cn("text-2xl font-bold", getAmountColor())}>
-                {formatCurrency(amount)}
-              </p>
-            </div>
+    <Card className={cn("transition-smooth", config.cardClass, className)}>
+      <CardContent className="p-6">
+        <div className="flex items-center gap-4">
+          <div className={cn("p-3 rounded-xl", config.iconClass)}>
+            {icon}
+          </div>
+          <div className="flex-1">
+            <p className="text-sm font-medium text-muted-foreground mb-1">{title}</p>
+            <p className={cn("text-3xl font-bold tracking-tight", config.amountClass)}>
+              {formatCurrency(amount)}
+            </p>
           </div>
         </div>
       </CardContent>

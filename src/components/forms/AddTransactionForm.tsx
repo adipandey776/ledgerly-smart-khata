@@ -156,7 +156,7 @@ export function AddTransactionForm({ customers, onSubmit, onCancel }: AddTransac
             <Button type="button" variant="outline" onClick={onCancel} className="flex-1">
               Cancel
             </Button>
-            <Button type="submit" variant="gradient" className="flex-1">
+            <Button type="submit" variant="default" className="flex-1">
               Add Transaction
             </Button>
           </div>

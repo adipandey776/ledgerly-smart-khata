@@ -2,119 +2,120 @@
 @tailwind components;  
 @tailwind utilities;
 
-/* Smart Khata Ledger Design System - Professional Business Theme */
+/* Smart Khata Ledger Design System - Modern Professional Theme */
 
 @layer base {
   :root {
-    /* Minimal Professional Base Colors */
-    --background: 250 250 250;
-    --foreground: 23 23 23;
+    /* Modern Professional Base Colors */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 10%;
 
     /* Card & Surface Colors */
-    --card: 255 255 255;
-    --card-foreground: 23 23 23;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
 
     /* Interactive Elements */
-    --popover: 255 255 255;
-    --popover-foreground: 23 23 23;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
 
-    /* Primary - Minimal Gray Accent */
-    --primary: 64 64 64;
-    --primary-foreground: 255 255 255;
-    --primary-light: 115 115 115;
-    --primary-dark: 38 38 38;
+    /* Primary - Professional Blue */
+    --primary: 207 90% 54%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 207 90% 64%;
+    --primary-dark: 207 90% 44%;
 
-    /* Secondary - Light Neutrals */
-    --secondary: 245 245 245;
-    --secondary-foreground: 64 64 64;
+    /* Secondary - Modern Amber */
+    --secondary: 45 93% 47%;
+    --secondary-foreground: 0 0% 100%;
 
-    /* Success & Credit - Subtle Green */
-    --success: 22 163 74;
-    --success-foreground: 255 255 255;
-    --success-light: 34 197 94;
-    --success-muted: 247 254 231;
+    /* Success & Credit - Professional Green */
+    --success: 122 39% 49%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 122 39% 59%;
+    --success-muted: 120 60% 96%;
 
-    /* Danger & Debit - Subtle Red */
-    --danger: 220 38 38;
-    --danger-foreground: 255 255 255;
-    --danger-light: 239 68 68;
-    --danger-muted: 254 242 242;
+    /* Danger & Debit - Professional Red */
+    --danger: 0 84% 60%;
+    --danger-foreground: 0 0% 100%;
+    --danger-light: 0 84% 70%;
+    --danger-muted: 0 93% 97%;
 
     /* Neutral States */
-    --muted: 245 245 245;
-    --muted-foreground: 115 115 115;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 240 240 240;
-    --accent-foreground: 23 23 23;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 10%;
 
-    --destructive: 220 38 38;
-    --destructive-foreground: 255 255 255;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
     /* Borders & Inputs */
-    --border: 229 229 229;
-    --input: 229 229 229;
-    --ring: 64 64 64;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 207 90% 54%;
 
     --radius: 0.5rem;
 
-    /* Minimal Professional Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
-    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(var(--success-light)));
-    --gradient-danger: linear-gradient(135deg, hsl(var(--danger)), hsl(var(--danger-light)));
-    --gradient-subtle: linear-gradient(135deg, hsl(var(--card)), hsl(var(--muted)));
+    /* Modern Professional Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(207 90% 54%), hsl(207 90% 64%));
+    --gradient-success: linear-gradient(135deg, hsl(122 39% 49%), hsl(122 39% 59%));
+    --gradient-danger: linear-gradient(135deg, hsl(0 84% 60%), hsl(0 84% 70%));
+    --gradient-subtle: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 96%));
 
-    /* Subtle Professional Shadows */
-    --shadow-soft: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
-    --shadow-medium: 0 2px 4px 0 hsl(0 0% 0% / 0.06);
-    --shadow-large: 0 4px 6px -1px hsl(0 0% 0% / 0.07);
-    --shadow-glow: 0 0 15px hsl(var(--primary) / 0.15);
+    /* Professional Shadows */
+    --shadow-soft: 0 1px 3px 0 hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow-medium: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -2px hsl(0 0% 0% / 0.1);
+    --shadow-large: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -4px hsl(0 0% 0% / 0.1);
+    --shadow-glow: 0 0 20px hsl(207 90% 54% / 0.25);
 
     /* Smooth Transitions */
     --transition-smooth: all 0.2s ease-out;
-    --transition-fast: all 0.1s ease-out;
+    --transition-fast: all 0.15s ease-out;
   }
 
   .dark {
-    --background: 23 23 23;
-    --foreground: 245 245 245;
+    --background: 0 0% 7%;
+    --foreground: 0 0% 95%;
 
-    --card: 38 38 38;
-    --card-foreground: 245 245 245;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 38 38 38;
-    --popover-foreground: 245 245 245;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 163 163 163;
-    --primary-foreground: 23 23 23;
-    --primary-light: 212 212 212;
-    --primary-dark: 115 115 115;
+    --primary: 207 90% 64%;
+    --primary-foreground: 0 0% 10%;
+    --primary-light: 207 90% 74%;
+    --primary-dark: 207 90% 54%;
 
-    --secondary: 64 64 64;
-    --secondary-foreground: 212 212 212;
+    --secondary: 45 93% 57%;
+    --secondary-foreground: 0 0% 10%;
 
-    --success: 34 197 94;
-    --success-foreground: 23 23 23;
-    --success-light: 74 222 128;
-    --success-muted: 20 83 45;
+    --success: 122 39% 59%;
+    --success-foreground: 0 0% 10%;
+    --success-light: 122 39% 69%;
+    --success-muted: 122 39% 15%;
 
-    --danger: 239 68 68;
-    --danger-foreground: 23 23 23;
-    --danger-light: 248 113 113;
-    --danger-muted: 127 29 29;
+    --danger: 0 84% 70%;
+    --danger-foreground: 0 0% 10%;
+    --danger-light: 0 84% 80%;
+    --danger-muted: 0 84% 15%;
 
-    --muted: 64 64 64;
-    --muted-foreground: 163 163 163;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 64 64 64;
-    --accent-foreground: 245 245 245;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 95%;
 
-    --destructive: 239 68 68;
-    --destructive-foreground: 245 245 245;
+    --destructive: 0 84% 70%;
+    --destructive-foreground: 0 0% 10%;
 
-    --border: 64 64 64;
-    --input: 64 64 64;
-    --ring: 163 163 163;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 207 90% 64%;
   }
+}
 }
 
 @layer base {

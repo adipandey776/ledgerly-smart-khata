@@ -20,7 +20,7 @@ export function BottomNavigation({ activeTab, onTabChange }: BottomNavigationPro
 
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-card border-t border-border shadow-large z-50">
-      <div className="flex items-center justify-around py-2 px-2 max-w-md mx-auto">
+      <div className="flex items-center justify-around py-3 px-2 max-w-md mx-auto">
         {tabs.map((tab) => {
           const Icon = tab.icon;
           const isActive = activeTab === tab.id;
@@ -29,13 +29,13 @@ export function BottomNavigation({ activeTab, onTabChange }: BottomNavigationPro
           return (
             <Button
               key={tab.id}
-              variant={isAddButton ? "gradient" : "ghost"}
+              variant={isAddButton ? "default" : "ghost"}
               size={isAddButton ? "icon-lg" : "icon"}
               className={cn(
                 "flex flex-col gap-1 h-auto py-2",
-                isAddButton && "rounded-full shadow-glow",
-                !isAddButton && isActive && "text-primary bg-primary/10",
-                !isAddButton && !isActive && "text-muted-foreground",
+                isAddButton && "rounded-full shadow-glow bg-primary hover:bg-primary-dark",
+                !isAddButton && isActive && "text-primary bg-primary/10 font-semibold",
+                !isAddButton && !isActive && "text-muted-foreground hover:text-foreground",
                 !isAddButton && "px-2"
               )}
               onClick={() => onTabChange(tab.id)}
